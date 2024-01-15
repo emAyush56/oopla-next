@@ -1,8 +1,15 @@
 import AppContainer from "@/components/App/AppContainer";
-import LayoutApp from "@/components/layouts/LayoutApp";
+import Head from "next/head";
 
 const AppIndex = () => {
-  return <AppContainer />;
+  return (
+    <>
+      <Head>
+        <title>Oopla</title>
+      </Head>
+      <AppContainer />
+    </>
+  );
 };
 
 export default AppIndex;
