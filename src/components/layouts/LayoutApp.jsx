@@ -1,6 +1,6 @@
 import HomeSidebar from "../App/HomeSidebar";
 
-const LayoutHome = ({ children }) => {
+const LayoutApp = ({ children }) => {
   return (
     <div className="flex">
       <aside className="w-[400px]">
@@ -11,4 +11,4 @@ const LayoutHome = ({ children }) => {
   );
 };
 
-export default LayoutHome;
+export default LayoutApp;

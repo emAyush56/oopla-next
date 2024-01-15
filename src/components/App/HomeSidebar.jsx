@@ -1,7 +1,7 @@
 import { SparklesIcon, UserIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
-function HomeSidebar() {
+function HomeSidebar({ chats, activeConversation, setActiveConversation }) {
   return (
     <div className="sticky top-0 z-50 flex h-screen w-full flex-col border-r border-r-gray-300">
       <header className="flex h-20 select-none items-center justify-between px-4">
@@ -18,8 +18,34 @@ function HomeSidebar() {
           </Link>
         </div>
       </header>
-      <section className="flex h-full items-center justify-center">
-        <NoMatches />
+      <section className="flex h-full justify-center">
+        {/* <NoMatches /> */}
+        <div className="chat-list w-full">
+          {activeConversation && (
+            <div
+              onClick={() => setActiveConversation(null)}
+              className="back-to-finder bg-theme-purple-100 hover:bg-gray-200 transition-all py-2 cursor-pointer px-4"
+            >
+              Back to meeting new people
+            </div>
+          )}
+          <div className="py-6 border-b px-4">All conversations</div>
+          <div className="flex flex-col">
+            {chats?.map((chat) => (
+              <div
+                onClick={() => setActiveConversation(chat)}
+                className={`chat-card transition-all px-4 cursor-pointer py-3 mb-1 ${
+                  chat.id === activeConversation?.id
+                    ? "bg-green-50"
+                    : "bg-gray-100 hover:bg-gray-50"
+                }`}
+                key={chat.id}
+              >
+                <span className="block">{chat.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </div>
   );
