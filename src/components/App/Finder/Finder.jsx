@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 import temp_data from "../../../temp.json";
-import Showcase from "../Showcase/Showcase";
+import Showcase from "../showcase/Showcase";
 import ToolTip from "@/components/shared/ToolTip";
 
 function Finder() {

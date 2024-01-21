@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Finder from "./Finder/Finder";
+import Finder from "./finder/Finder";
 import { FunnelIcon } from "@heroicons/react/24/solid";
-import HomeSidebar from "./HomeSidebar";
+import AppSidebar from "./AppSidebar";
+import { getAccessToken } from "@/utils/authUtils";
 
 const CHATS = [
   {
@@ -139,12 +140,12 @@ const CHATS = [
 function AppContainer() {
   const [activeConversation, setActiveConversation] = useState(null);
 
-  console.log(activeConversation, "active convo in app container");
+  const at = getAccessToken();
 
   return (
     <div className="flex">
       <aside className="w-[400px]">
-        <HomeSidebar
+        <AppSidebar
           chats={CHATS}
           activeConversation={activeConversation}
           setActiveConversation={setActiveConversation}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import PagesHeader from "@/components/PagesHeader";
-import PagesFooter from "@/components/PagesFooter";
+import PagesHeader from "@/components/shared/PagesHeader";
+import PagesFooter from "@/components/shared/PagesFooter";
 import Image from "next/image";
 
 const images = [

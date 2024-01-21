@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import axios from "@/api/axios";
 import Link from "next/link";
 import ButtonLoader from "@/components/shared/ButtonLoader";
+import { setAccessToken } from "@/utils/authUtils";
 
 const URL_LOGIN = "/login";
 
@@ -30,7 +31,7 @@ function Login() {
         }
       );
       const rawAccessToken = res?.data.access_token;
-      // encryptAndSetAccessToken(rawAccessToken);
+      setAccessToken(rawAccessToken);
 
       setButtonLoader(false);
       window.location.href = "/app";

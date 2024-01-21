@@ -1,4 +1,4 @@
-import HomeSidebar from "../App/HomeSidebar";
+import HomeSidebar from "../App/AppSidebar";
 
 const LayoutApp = ({ children }) => {
   return (

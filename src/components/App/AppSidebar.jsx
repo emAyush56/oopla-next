@@ -1,7 +1,7 @@
 import { SparklesIcon, UserIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
-function HomeSidebar({ chats, activeConversation, setActiveConversation }) {
+function AppSidebar({ chats, activeConversation, setActiveConversation }) {
   return (
     <div className="sticky top-0 z-50 flex h-screen w-full flex-col border-r border-r-gray-300">
       <header className="flex h-20 select-none items-center justify-between px-4">
@@ -65,4 +65,4 @@ function NoMatches() {
   );
 }
 
-export default HomeSidebar;
+export default AppSidebar;
