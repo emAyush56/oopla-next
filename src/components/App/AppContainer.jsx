@@ -1,8 +1,7 @@
 import { useState } from "react";
-import Finder from "./finder/Finder";
 import { FunnelIcon } from "@heroicons/react/24/solid";
 import AppSidebar from "./AppSidebar";
-import { getAccessToken } from "@/utils/authUtils";
+import Finder from "./finder/Finder";
 
 const CHATS = [
   {
@@ -139,8 +138,6 @@ const CHATS = [
 
 function AppContainer() {
   const [activeConversation, setActiveConversation] = useState(null);
-
-  const at = getAccessToken();
 
   return (
     <div className="flex">
